@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="70dd3e80-1eeb-42d6-bebf-17677ac24ee2" name="Changes" comment="" />
+    <list default="true" id="70dd3e80-1eeb-42d6-bebf-17677ac24ee2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python/.idea/python.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python/3190 snake.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/14499 roll the dice.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/14499 roll the dice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/14503 robot cleaner.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/14503 robot cleaner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/14888 operator put.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/14888 operator put.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/14889 start n link.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/14889 start n link.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/16234 population move.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/16234 population move.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2nQe88B2ILof3VReg000mk6rQDC" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -18,6 +35,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "/Users/ohrumpark/Downloads/testcode",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
@@ -51,8 +70,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23339.19" />
-        <option value="bundled-python-sdk-0029f7779945-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23339.19" />
+        <option value="bundled-python-sdk-fb887030ada0-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.21565.199" />
       </set>
     </attachedChunks>
   </component>
