@@ -4,20 +4,23 @@ import java.util.ArrayList;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
-class Node implements Comparable<Node>{
-    int v, w;
-    public Node(int v, int w){
-        this.v = v;
-        this.w = w;
-    }
 
-    @Override
-    public int compareTo(Node n) {
-        return this.w - n.w;
-    }
-}
 
 public class ShortestPath_1753 {
+
+    static class Node implements Comparable<Node>{
+        int v, w;
+        public Node(int v, int w){
+            this.v = v;
+            this.w = w;
+        }
+
+        @Override
+        public int compareTo(Node n) {
+            return this.w - n.w;
+        }
+    }
+
     public static void main(String[] args) throws Exception{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
