@@ -35,8 +35,7 @@ public class SharkMiddle_21609 {
 		for(int j = 0; j < N; j++) {
 			for(int i = 0; i < N; i++) {
 				if(board[i][j] == BLACK){//black
-					gravityFlush(temp, i - 1, j);
-					continue; // flush on the black block
+					gravityFlush(temp, i - 1, j); // flush on the black block
 				}
 				else if(board[i][j] != BLANK) {
 					temp.add(board[i][j]);
@@ -52,6 +51,7 @@ public class SharkMiddle_21609 {
 		ArrayList<int[]> largestBlock = new ArrayList<>();
 		ArrayList<int[]> rainbow = new ArrayList<>();
 		boolean[][] visited = new boolean[N][N];
+		int maxRainbowCount = 0;
 		
 		for(int i = 0; i < N; i++) {
 			for(int j = 0; j < N; j++) {
@@ -61,17 +61,20 @@ public class SharkMiddle_21609 {
 		
 		ArrayDeque<int[]> queue = new ArrayDeque<int[]>();
 		for(int i = 0; i < N; i ++) {
-			for(int j = 0; i < N; i ++) {
+			for(int j = 0; j < N; j ++) {
 				if(!visited[i][j] && board[i][j] != RAINBOW && board[i][j] != BLACK && board[i][j] != BLANK) {
 					int color = board[i][j];
 					queue.offer(new int[] {i, j});
 					block.add(new int[] {i, j});
+					visited[i][j] = true;
+					int rainbowCount = 0;
 					while(!queue.isEmpty()) {
 						int[] coord = queue.poll();
 						for(int d = 0; d < 4; d++) {
 							int nx = coord[0] + dx[d], ny = coord[1] + dy[d];
 							if(nx >= 0 && nx < N && ny >= 0 && ny < N &&
 									!visited[nx][ny] &&(board[nx][ny] == color || board[nx][ny] == RAINBOW)) {
+								if(board[nx][ny] == RAINBOW) rainbowCount ++;
 								visited[nx][ny] = true;
 								block.add(new int[] {nx, ny});
 								queue.offer(new int[] {nx, ny});
@@ -79,8 +82,14 @@ public class SharkMiddle_21609 {
 						}
 					}
 
-					if(block.size() >= largestBlock.size() && block.size() >= 2) {
-						largestBlock = block;
+					if(block.size() >= 2){
+						if( block.size() > largestBlock.size() ) {
+							largestBlock = block;
+							maxRainbowCount = rainbowCount;
+						} else if ( block.size() == largestBlock.size() && rainbowCount >= maxRainbowCount){
+							largestBlock = block;
+							maxRainbowCount = rainbowCount;
+						}
 					}
 					block = new ArrayList<>();
 					for(int k = 0; k < rainbow.size(); k++) { //reset rainbow visited
@@ -114,32 +123,14 @@ public class SharkMiddle_21609 {
 		
 		while(true) {
 			int tScore = delLargestBlock();
-			for(int i = 0; i < N; i++) {
-				System.out.println(Arrays.toString(board[i]));
-			}System.out.println();
-			
 			score += tScore;
 			if(tScore == 0) {
 				System.out.println(score);
 				return;
 			}
 			gravity();
-			
-			for(int i = 0; i < N; i++) {
-				System.out.println(Arrays.toString(board[i]));
-			}			System.out.println();
-
 			rotate();
-			
-			for(int i = 0; i < N; i++) {
-				System.out.println(Arrays.toString(board[i]));
-			}			System.out.println();
-
 			gravity();
-			
-			for(int i = 0; i < N; i++) {
-				System.out.println(Arrays.toString(board[i]));
-			} System.out.println();
 		}
 		
 		
